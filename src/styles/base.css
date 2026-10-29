@@ -16,8 +16,10 @@
   --error: #a02c28;
   --radius: 5px;
   --font-main: 'Segoe UI', Arial, sans-serif;
-  --accent-blue: #315da8;
-  --heading-gradient: linear-gradient(110deg, #1e5148 10%, #126d78 52%, var(--accent-blue) 95%);
+  --font-display: 'Segoe UI Black', 'Segoe UI', Arial, sans-serif;
+  --accent-blue: #1d4ed8;
+  --accent-purple: #7e22ce;
+  --heading-gradient: linear-gradient(100deg, #1d4ed8 0%, #7e22ce 16%, #be185d 33%, #1d4ed8 50%, #7e22ce 66%, #be185d 83%, #1d4ed8 100%);
 }
 * {
   box-sizing: border-box;
@@ -59,18 +61,27 @@ h1, h2, h3 {
   font-weight: 600;
 }
 h1, h2 {
+  color: var(--ink);
+  animation: title-enter 420ms ease-out both;
+}
+h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+h2 {
   font-family: var(--font-main);
   font-weight: 700;
-  color: var(--green);
-  animation: title-enter 320ms ease-out both;
 }
 p {
   line-height: 1.7;
 }
-em {
-  color: inherit;
-  font-weight: inherit;
-  font-style: normal;
+h1 em {
+  display: inline-block;
+  max-width: 100%;
+  padding-block: 0.06em 0.16em;
+  color: var(--accent-blue);
+  font: italic 700 0.86em/1.2 var(--font-main);
 }
 .container {
   width: min(1180px, calc(100% - 96px));
@@ -141,11 +152,15 @@ em {
   top: 12px;
 }
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
-  h1, h2 {
+  h1 em, .writing-layout h1, .post-detail h1 {
+    width: fit-content;
+    max-width: 100%;
     background-image: var(--heading-gradient);
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: title-enter 420ms ease-out both, color-flow 4.5s ease-in-out infinite alternate;
   }
 }
 @keyframes title-enter {
@@ -158,12 +173,20 @@ em {
     transform: none;
   }
 }
+@keyframes color-flow {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  h1, h2 {
+  h1, h2, h1 em, .writing-layout h1, .post-detail h1 {
     animation: none;
   }
 }
