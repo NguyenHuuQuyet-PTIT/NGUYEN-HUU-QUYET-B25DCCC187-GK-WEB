@@ -1,0 +1,124 @@
+.reading-layout {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-top: 40px;
+  overflow-wrap: anywhere;
+}
+.post-detail {
+  padding-block: 10px 40px;
+}
+.post-detail h1 {
+  font-size: clamp(31px, 4.2vw, 49px);
+  line-height: 1.25;
+  margin-block: 20px 26px;
+}
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 13px;
+  color: var(--muted);
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-meta strong {
+  color: var(--green);
+}
+.post-body {
+  white-space: pre-wrap;
+  font: 20px/1.9 var(--font-serif);
+  margin-block: 38px 8px;
+}
+.comments-section {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+.comments-section h2 {
+  font-size: 30px;
+}
+.login-prompt {
+  background: var(--green-pale);
+  border-radius: var(--radius);
+  padding: 20px;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.comment-form {
+  padding: 25px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+}
+.comment-form textarea {
+  min-height: 130px;
+  max-height: 400px;
+}
+.comment-list {
+  display: grid;
+  gap: 18px;
+}
+.comment {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.comment-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+.comment-heading strong {
+  color: var(--green);
+  font-size: 13px;
+}
+.comment h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.comment-body {
+  white-space: pre-wrap;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 38px;
+}
+.pagination button {
+  min-width: 40px;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--green);
+  font-size: 12px;
+  padding: 9px 12px;
+}
+.pagination button:hover:not(:disabled) {
+  border-color: var(--green);
+}
+.pagination .current-page {
+  background: var(--green);
+  color: #ffffff;
+  border-color: var(--green);
+}
+.page-numbers, .page-numbers > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-gap {
+  color: var(--muted);
+}

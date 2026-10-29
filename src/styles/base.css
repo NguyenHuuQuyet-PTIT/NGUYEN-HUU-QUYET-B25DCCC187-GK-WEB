@@ -1,0 +1,142 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #25352f;
+  background: #faf9f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --paper: #faf9f6;
+  --surface: #ffffff;
+  --ink: #25352f;
+  --muted: #66736b;
+  --green: #1e5148;
+  --green-hover: #153f37;
+  --green-pale: #e9eee7;
+  --border: #dedfd7;
+  --error: #a02c28;
+  --radius: 5px;
+  --font-serif: 'Times New Roman', Times, serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button, input, textarea, select {
+  font: inherit;
+}
+button, a, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button, select {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+a {
+  color: var(--green);
+  text-underline-offset: 4px;
+}
+a, button {
+  touch-action: manipulation;
+}
+button, a, input, textarea, select {
+  outline-offset: 4px;
+}
+:focus-visible {
+  outline: 3px solid #bd8434;
+}
+h1, h2, h3, p {
+  margin-top: 0;
+}
+h1, h2, h3 {
+  font-weight: 500;
+}
+h1, h2 {
+  font-family: var(--font-serif);
+}
+p {
+  line-height: 1.7;
+}
+em {
+  color: var(--green);
+  font-weight: 400;
+}
+.container {
+  width: min(1180px, calc(100% - 96px));
+  margin-inline: auto;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 23px;
+  border: 1px solid var(--green);
+  border-radius: var(--radius);
+  background: var(--green);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background 150ms;
+}
+.button:hover:not(:disabled) {
+  background: var(--green-hover);
+  color: #ffffff;
+}
+.button-outline {
+  background: transparent;
+  color: var(--green);
+}
+.button-small {
+  min-height: 40px;
+  padding: 10px 20px;
+}
+.button-full {
+  width: 100%;
+}
+.text-button {
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  padding: 10px 0;
+}
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+.eyebrow {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.7;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 36px;
+  font-size: 14px;
+}
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  z-index: 10;
+  padding: 14px;
+  background: var(--surface);
+}
+.skip-link:focus {
+  top: 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

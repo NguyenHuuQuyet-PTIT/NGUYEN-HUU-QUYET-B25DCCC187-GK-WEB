@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+.vscode/
+test-results/
+playwright-report/
+*.zip
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db

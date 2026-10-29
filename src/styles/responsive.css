@@ -1,0 +1,152 @@
+@media (min-width: 1500px) {
+  .home-hero {
+    padding-block: 75px 65px;
+  }
+}
+@media (max-width: 1050px) {
+  .container {
+    width: calc(100% - 64px);
+  }
+  .home-hero {
+    gap: 35px;
+    grid-template-columns: 1fr 0.5fr;
+  }
+  .hero-note {
+    padding: 22px;
+  }
+  .hero-note h2 {
+    font-size: 24px;
+  }
+  .post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .auth-layout {
+    gap: 35px;
+  }
+  .form-panel {
+    padding: 25px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+  .header-inner {
+    position: relative;
+    min-height: 74px;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .brand {
+    font-size: 25px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding-block: 15px 22px;
+    border-top: 1px solid var(--border);
+  }
+  .main-nav.is-open {
+    display: flex;
+  }
+  .main-nav > a:not(.button), .main-nav .text-button {
+    padding-block: 9px;
+    text-align: left;
+  }
+  .nav-user {
+    border: 0;
+    padding: 0;
+  }
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-block: 37px 32px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(30px, 6vw, 40px);
+    letter-spacing: -0.8px;
+  }
+  .hero-note {
+    padding: 20px;
+  }
+  .hero-note h2 {
+    font-size: 24px;
+    margin-block: 12px 18px;
+  }
+  .hero-note h2 br {
+    display: none;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .posts-section {
+    padding-top: 30px;
+  }
+  .section-heading h2 {
+    font-size: 30px;
+  }
+  .post-filters {
+    flex-direction: column;
+    padding: 17px;
+  }
+  .sort-field {
+    flex-basis: auto;
+  }
+  .post-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .post-card {
+    padding: 23px;
+  }
+  .results-summary {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-block: 28px;
+  }
+  .auth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 36px;
+  }
+  .auth-intro h1 {
+    font-size: 33px;
+  }
+  .form-panel, .writing-form {
+    padding: 22px;
+  }
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .post-body {
+    font-size: 18px;
+  }
+  .comment, .comment-form {
+    padding: 19px;
+  }
+  .pagination {
+    gap: 8px;
+  }
+  .pagination button {
+    min-width: 34px;
+    padding-inline: 9px;
+  }
+  .page-numbers, .page-numbers > span {
+    gap: 5px;
+  }
+  .not-found {
+    margin-top: 35px;
+    padding: 55px 20px;
+  }
+}
