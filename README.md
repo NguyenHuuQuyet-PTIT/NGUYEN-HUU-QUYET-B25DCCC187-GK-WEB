@@ -64,7 +64,7 @@ src/
 | localStorage hỏng hoặc bị chặn | Đạt: không trắng trang, báo lỗi ghi, không thông báo thành công khi lưu thất bại. |
 | Responsive và menu điện thoại | Đạt: 3/2/1 cột, menu đóng/mở được, từ khóa dài không gây tràn ngang ở 320 px. |
 
-Chạy lại kiểm thử khi đã cài Microsoft Edge và có Internet:
+Chạy lại kiểm thử:
 
 ```bash
 npm test
