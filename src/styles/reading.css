@@ -26,7 +26,7 @@
 }
 .post-body {
   white-space: pre-wrap;
-  font: 20px/1.9 var(--font-serif);
+  font: 20px/1.9 var(--font-main);
   margin-block: 38px 8px;
 }
 .comments-section {

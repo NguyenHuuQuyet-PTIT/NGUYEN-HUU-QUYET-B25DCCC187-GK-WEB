@@ -1,5 +1,5 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   color: #25352f;
   background: #faf9f6;
   font-synthesis: none;
@@ -15,7 +15,9 @@
   --border: #dedfd7;
   --error: #a02c28;
   --radius: 5px;
-  --font-serif: 'Times New Roman', Times, serif;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  --accent-blue: #315da8;
+  --heading-gradient: linear-gradient(110deg, #1e5148 10%, #126d78 52%, var(--accent-blue) 95%);
 }
 * {
   box-sizing: border-box;
@@ -54,17 +56,21 @@ h1, h2, h3, p {
   margin-top: 0;
 }
 h1, h2, h3 {
-  font-weight: 500;
+  font-weight: 600;
 }
 h1, h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-main);
+  font-weight: 700;
+  color: var(--green);
+  animation: title-enter 320ms ease-out both;
 }
 p {
   line-height: 1.7;
 }
 em {
-  color: var(--green);
-  font-weight: 400;
+  color: inherit;
+  font-weight: inherit;
+  font-style: normal;
 }
 .container {
   width: min(1180px, calc(100% - 96px));
@@ -134,9 +140,30 @@ em {
 .skip-link:focus {
   top: 12px;
 }
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  h1, h2 {
+    background-image: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+@keyframes title-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+  h1, h2 {
+    animation: none;
   }
 }

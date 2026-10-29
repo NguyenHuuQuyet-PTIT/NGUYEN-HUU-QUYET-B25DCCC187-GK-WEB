@@ -115,19 +115,20 @@
   border-radius: 2px;
 }
 .post-number {
-  font: 17px var(--font-serif);
+  font: 17px var(--font-main);
   color: #7b857c;
 }
 .post-card h3 {
-  font: 23px/1.35 var(--font-serif);
+  font: 600 22px/1.4 var(--font-main);
   margin-bottom: 15px;
 }
 .post-card h3 a {
   color: var(--ink);
   text-decoration: none;
+  transition: color 180ms ease;
 }
-.post-card h3 a:hover {
-  color: var(--green);
+.post-card h3 a:hover, .post-card h3 a:focus-visible {
+  color: var(--accent-blue);
   text-decoration: underline;
 }
 .post-excerpt {
@@ -162,7 +163,7 @@
   border-radius: 50%;
   background: var(--green-pale);
   color: var(--green);
-  font: 16px var(--font-serif);
+  font: 16px var(--font-main);
 }
 .author-name, .post-source {
   display: block;
